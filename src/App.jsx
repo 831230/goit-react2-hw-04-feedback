@@ -1,4 +1,4 @@
-import WidgetTitle from 'components/WidgetTitle/WidgetTitle';
+import Section from 'components/Section/Section';
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -20,23 +20,16 @@ class App extends Component {
   };
 
   static propTypes = {
-    title: PropTypes.string,
     step: PropTypes.number,
     initialGood: PropTypes.number,
     initialNeutral: PropTypes.number,
     initialBad: PropTypes.number,
   };
 
-  // const App = () => (
-  //   <>
-  //     <WidgetTitle title="Please leave feedback"/>
-  //   </>
-  // );
-
   render() {
     return (
       <>
-        <WidgetTitle title="Please leave feedback" state={this.state}/>
+        <Section title="Please leave feedback" state={this.state}/>
       </>
     );
   }
