@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Statistics = ({
+  title,
   good,
   neutral,
   bad,
@@ -10,7 +11,7 @@ const Statistics = ({
 }) => {
   return (
     <div>
-      <h2>Statistics</h2>
+      <h2>{title}</h2>
       {good || neutral || bad ? (
         <div>
           <p>Good&#58; {good}</p>
