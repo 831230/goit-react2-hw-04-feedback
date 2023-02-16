@@ -1,15 +1,12 @@
 import PropTypes from 'prop-types';
-import { useStats } from 'context/context';
 
-const FeedbackOptions = () => {
-  const { handleIncrement } = useStats();
-  const options = ['good', 'neutral', 'bad'];
+const FeedbackOptions = ({ options, handleClickOnBtn }) => {
   return (
     <>
       <div>
         {options &&
           options.map(element => (
-            <button key={element} onClick={() => handleIncrement(element)}>
+            <button key={element} onClick={() => handleClickOnBtn(element)}>
               {element}
             </button>
           ))}
@@ -20,7 +17,7 @@ const FeedbackOptions = () => {
 
 FeedbackOptions.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string),
-  handleIncrement: PropTypes.func,
+  handleClickOnBtn: PropTypes.func,
 };
 
 export default FeedbackOptions;
