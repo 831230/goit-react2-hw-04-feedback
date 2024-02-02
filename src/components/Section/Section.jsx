@@ -1,18 +1,15 @@
 import PropTypes from 'prop-types';
 
-const Section = ({ children, title }) => {
+const Section = ({ children }) => {
   return (
     <section>
-      {children[0]}
-      <h2>{title}</h2>
-      {children[1]}
+      {children}
     </section>
   );
 };
 
 Section.propTypes = {
   children: PropTypes.node,
-  title: PropTypes.string,
 };
 
 export default Section;

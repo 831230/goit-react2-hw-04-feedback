@@ -26,18 +26,19 @@ const App = () => {
 
   const amountStats = good + neutral + bad;
   const countPositiveFeedbackPercentage = Math.round(
-    (good / amountStats) * 100
+    (good / amountStats) * 100 
   );
 
   return (
     <>
       <h1>Please leave feedback</h1>
-      <Section title="Statistics">
+      <Section >
         <FeedbackOptions
           options={Object.keys({ good, neutral, bad })}
           handleClickOnBtn={handleIncrement}
         />
         <Statistics
+          title="Statistics"
           good={good}
           neutral={neutral}
           bad={bad}
